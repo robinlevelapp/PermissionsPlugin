@@ -276,7 +276,9 @@ namespace Plugin.Permissions
                 case Manifest.Permission.ReadExternalStorage:
                 case Manifest.Permission.WriteExternalStorage:
                     return Permission.Storage;
-            }
+				case Manifest.Permission.Flashlight:
+					return Permission.FlashLight;
+			}
 
             return Permission.Unknown;
         }
@@ -389,7 +391,13 @@ namespace Plugin.Permissions
                             permissionNames.Add(Manifest.Permission.WriteExternalStorage);
                     }
                     break;
-                default:
+				case Permission.FlashLight:
+					{
+						if (HasPermissionInManifest(Manifest.Permission.Flashlight))
+							permissionNames.Add(Manifest.Permission.Flashlight);
+					}
+					break;
+				default:
                     return null;
             }
 

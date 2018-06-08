@@ -70,6 +70,9 @@ namespace PermissionsTest
 				case "Storage":
 					status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Storage);
 					break;
+				case "FlashLight":
+					status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.FlashLight);
+					break;
 			}
 
 			await DisplayAlert("Results", status.ToString(), "OK");
@@ -116,6 +119,9 @@ namespace PermissionsTest
 							break;
 						case "Storage":
 							status = (await CrossPermissions.Current.RequestPermissionsAsync(Permission.Storage))[Permission.Storage];
+							break;
+						case "FlashLight":
+							status = (await CrossPermissions.Current.RequestPermissionsAsync(Permission.FlashLight))[Permission.FlashLight];
 							break;
 					}
 					await DisplayAlert("Results", status.ToString(), "OK");

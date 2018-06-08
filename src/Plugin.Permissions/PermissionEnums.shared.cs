@@ -123,6 +123,12 @@
 		/// iOS: MPMediaLibrary
 		/// UWP: None
 		/// </summary>
-		MediaLibrary
+		MediaLibrary,
+		/// <summary>
+		/// Android: FlashLight
+		/// iOS: None
+		/// UWP: None
+		/// </summary>
+		FlashLight
 	}
 }
