@@ -35,6 +35,8 @@
 
 		<Company>LevelApp</Company>
 
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DebugType>full</DebugType>
